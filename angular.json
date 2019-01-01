@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngauth0-lib": {
+      "root": "projects/ngauth0-lib",
+      "sourceRoot": "projects/ngauth0-lib/src",
+      "projectType": "library",
+      "prefix": "tahmina",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngauth0-lib/tsconfig.lib.json",
+            "project": "projects/ngauth0-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngauth0-lib/src/test.ts",
+            "tsConfig": "projects/ngauth0-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngauth0-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngauth0-lib/tsconfig.lib.json",
+              "projects/ngauth0-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngauth0-lib-app"

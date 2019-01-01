@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngauth0-lib": [
+        "dist/ngauth0-lib"
+      ],
+      "ngauth0-lib/*": [
+        "dist/ngauth0-lib/*"
+      ]
+    }
   }
 }
