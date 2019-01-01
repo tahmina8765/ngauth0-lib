@@ -5,3 +5,4 @@
 export * from './lib/ngauth0-lib.service';
 export * from './lib/ngauth0-lib.component';
 export * from './lib/ngauth0-lib.module';
+export * from './lib/auth/auth.component';
